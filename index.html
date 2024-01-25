@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Valuta il tuo Zaffiro.Cos</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Valuta il tuo Zaffiro.Cos</h1>
+        <div class="form-container" id="form-container">
+            <label for="colore">Colore dello zaffiro:</label>
+            <select id="colore" onchange="caricaSfumature()">
+                <option value="pappadasha">Pappadasha</option>
+                <option value="royal blue">Royal Blue</option>
+                <option value="cornflower blue">Cornflower Blue</option>
+                <option value="kashmir blue">Kashmir Blue</option>
+                <option value="ceylon blue">Ceylon Blue</option>
+            </select>
+            
+            <div class="hidden" id="sfumatura-container">
+                <label for="sfumatura">Sfumatura di colore (da 0 a 1):</label>
+                <input type="number" id="sfumatura" step="0.01" placeholder="Inserisci la sfumatura di colore">
+            </div>
+
+            <label for="purezza">Purezza dello zaffiro (da 0 a 1):</label>
+            <input type="number" id="purezza" step="0.01" placeholder="Inserisci la purezza">
+
+            <label for="taglio">Tipo di taglio:</label>
+            <select id="taglio">
+                <option value="1">Brillante Ovale o Rotondo</option>
+                <option value="2">a Cuscino</option>
+                <option value="3">Smeraldo</option>
+                <option value="4">Principessa</option>
+                <option value="5">Baguette</option>
+            </select>
+
+            <label for="carato">Peso in carati dello zaffiro:</label>
+            <input type="number" id="carato" step="0.01" placeholder="Inserisci il peso in carati">
+
+            <label for="provenienza">Provenienza dello zaffiro:</label>
+            <select id="provenienza">
+                <option value="sri lanka">Sri Lanka</option>
+                <option value="birmania">Birmania</option>
+                <option value="thailandia">Thailandia</option>
+                <option value="australia">Australia</option>
+                <option value="altro">Altro</option>
+            </select>
+
+            <label for="trattamenti">Trattamenti termici:</label>
+            <select id="trattamenti">
+                <option value="si">Sì</option>
+                <option value="no">No</option>
+            </select>
+
+            <button type="button" onclick="calcolaValore()">Calcola Valore</button>
+
+            <div class="hidden" id="risultato-container">
+                <p id="risultato">Il valore stimato dello zaffiro è di <span id="valore-finale"></span> euro.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
